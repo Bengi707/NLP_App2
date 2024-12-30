@@ -1,295 +1,334 @@
+class Word:
+    def __init__(self, text, number="any",person="any",tense="any"):
+        self.text = text
+        self.person = person
+        self.number = number
+        self.tense = tense
+
 DT = [
-    ["that", {"number": "SG"}],
-    [["this", {"number": "SG"}]],
-    [["a", {"number": "SG"}]],
-    [["the", {"number": "any"}]],  # Neutral to singular/plural
-    [["an", {"number": "SG"}]],
-    [["these", {"number": "PL"}]],
-    [["those", {"number": "PL"}]],
+    [Word("that","SG")],[Word("this","SG")],
+    [Word("a","SG")],[Word("the")],# Neutral to singular/plural
+    [Word("an","SG")],[Word("these","PL",)],
+    [Word("those","PL")],
 ]
 
 NN = [
-    [["book", {"number": "SG"}]],
-    [["flight", {"number": "SG"}]],
-    [["meal", {"number": "SG"}]],
-    [["money", {"number": "SG"}]],
-    [["present", {"number": "SG"}]],
-    [["school", {"number": "SG"}]],
-    [["music", {"number": "SG"}]],
-    [["movie", {"number": "SG"}]],
-    [["friend", {"number": "SG"}]],
-    [["apple", {"number": "SG"}]],
-    [["face", {"number": "SG"}]],
-    [["market", {"number": "SG"}]],
-    [["dog", {"number": "SG"}]],
-    [["cat", {"number": "SG"}]],
-    [["house", {"number": "SG"}]],
-    [["car", {"number": "SG"}]],
-    [["teacher", {"number": "SG"}]],
-    [["child", {"number": "SG"}]],
-    [["idea", {"number": "SG"}]],
-    [["story", {"number": "SG"}]],
-    [["game", {"number": "SG"}]],
-    [["photo", {"number": "SG"}]],
-    [["river", {"number": "SG"}]],
-    [["city", {"number": "SG"}]],
-    [["garden", {"number": "SG"}]],
-    [["song", {"number": "SG"}]],
-    [["phone", {"number": "SG"}]],
-    [["computer", {"number": "SG"}]],
-    [["table", {"number": "SG"}]],
-    [["bottle", {"number": "SG"}]],
-    [["shirt", {"number": "SG"}]],
-    [["painting", {"number": "SG"}]],
-    [["fruit", {"number": "SG"}]],
-    [["watermelon", {"number": "SG"}]],
-    [["mother", {"number": "SG"}]],
-    [["summer", {"number": "SG"}]],
-    [["village", {"number": "SG"}]],
+    [Word("book","SG")],[Word("flight","SG")],[Word("meal","SG")],
+    [Word("money","SG")],[Word("present","SG")],[Word("school","SG")],
+    [Word("music","SG")],[Word("movie","SG")],[Word("friend","SG")],
+    [Word("apple","SG")],[Word("face","SG")],[Word("market","SG")],
+    [Word("face","SG")],[Word("dog","SG")],[Word("cat","SG")],
+    [Word("house","SG")],[Word("teacher","SG")],[Word("child","SG")],
+    [Word("story","SG")],[Word("photo","SG")],[Word("river","SG")],
+    [Word("city","SG")],[Word("garden", "SG")],[Word("song", "SG")],
+    [Word("phone", "SG")],[Word("computer", "SG")],[Word("table", "SG")],
+    [Word("bottle", "SG")],[Word("shirt", "SG")],[Word("painting", "SG")],
+    [Word("fruit", "SG")],[Word("watermelon", "SG")],[Word("mother", "SG")],
+    [Word("summer", "SG")],[Word("village", "SG")],
 ]
 
 NNS = [
-    [["books", {"number": "PL"}]],
-    [["flights", {"number": "PL"}]],
-    [["meals", {"number": "PL"}]],
-    [["presents", {"number": "PL"}]],
-    [["schools", {"number": "PL"}]],
-    [["friends", {"number": "PL"}]],
-    [["apples", {"number": "PL"}]],
-    [["faces", {"number": "PL"}]],
-    [["markets", {"number": "PL"}]],
-    [["dogs", {"number": "PL"}]],
-    [["cats", {"number": "PL"}]],
-    [["houses", {"number": "PL"}]],
-    [["cars", {"number": "PL"}]],
-    [["teachers", {"number": "PL"}]],
-    [["children", {"number": "PL"}]],
-    [["ideas", {"number": "PL"}]],
-    [["stories", {"number": "PL"}]],
-    [["games", {"number": "PL"}]],
-    [["photos", {"number": "PL"}]],
-    [["rivers", {"number": "PL"}]],
-    [["cities", {"number": "PL"}]],
-    [["gardens", {"number": "PL"}]],
-    [["songs", {"number": "PL"}]],
-    [["phones", {"number": "PL"}]],
-    [["computers", {"number": "PL"}]],
-    [["tables", {"number": "PL"}]],
-    [["bottles", {"number": "PL"}]],
-    [["shirts", {"number": "PL"}]],
-    [["paintings", {"number": "PL"}]],
-    [["fruits", {"number": "PL"}]],
-    [["watermelons", {"number": "PL"}]],
-    [["mothers", {"number": "PL"}]],
-    [["summers", {"number": "PL"}]],
-    [["villages", {"number": "PL"}]],
+    [Word("books","PL")],[Word("flights","PL")],[Word("meals","PL")],
+    [Word("presents","PL")],[Word("schools","PL")],[Word("friends","PL")],
+    [Word("apples","PL")],[Word("faces","PL")],[Word("markets","PL")],
+    [Word("dogs","PL")],[Word("cats","PL")],[Word("houses","PL")],
+    [Word("cars","PL")],[Word("teachers","PL")],[Word("children","PL")],
+    [Word("ideas","PL")],[Word("books","PL")],[Word("stories","PL")],
+    [Word("games","PL")],[Word("photos","PL")],[Word("rivers","PL")],
+    [Word("cities","PL")],[Word("gardens","PL")],[Word("songs","PL")],
+    [Word("phones","PL")],[Word("computers","PL")],[Word("tables","PL")],
+    [Word("bottles","PL")],[Word("shirts","PL")],[Word("paintings","PL")],
+    [Word("watermelons","PL")],[Word("mothers","PL")],[Word("summers","PL")],
+    [Word("villages","PL")]
 ]
 
 # Base form verbs (non-past tense)
 VB = [
-    [["prefer", {"person": "any", "tense": "any"}]],
-    [["include", {"person": "any", "tense": "any"}]],
-    [["eat", {"person": "any", "tense": "any"}]],
-    [["take", {"person": "any", "tense": "any"}]],
-    [["want", {"person": "any", "tense": "any"}]],
-    [["watch", {"person": "any", "tense": "any"}]],
-    [["spend", {"person": "any", "tense": "any"}]],
-    [["enjoy", {"person": "any", "tense": "any"}]],
-    [["book", {"person": "any", "tense": "any"}]],
-    [["present", {"person": "any", "tense": "any"}]],
-    [["build", {"person": "any", "tense": "any"}]],
-    [["sing", {"person": "any", "tense": "any"}]],
-    [["dance", {"person": "any", "tense": "any"}]],
-    [["paint", {"person": "any", "tense": "any"}]],
-    [["write", {"person": "any", "tense": "any"}]],
-    [["call", {"person": "any", "tense": "any"}]],
-    [["drive", {"person": "any", "tense": "any"}]],
-    [["buy", {"person": "any", "tense": "any"}]],
-    [["sell", {"person": "any", "tense": "any"}]],
-    [["read", {"person": "any", "tense": "any"}]],
-    [["open", {"person": "any", "tense": "any"}]],
-    [["close", {"person": "any", "tense": "any"}]],
-    [["fix", {"person": "any", "tense": "any"}]],
-    [["carry", {"person": "any", "tense": "any"}]],
-    [["create", {"person": "any", "tense": "any"}]],
-    [["explore", {"person": "any", "tense": "any"}]],
-    [["face", {"person": "any", "tense": "any"}]],
+    [Word("prefer", "any", "any", "any")],[Word("include", "any", "any", "any")],
+    [Word("eat", "any", "any", "any")],[Word("take", "any", "any", "any")],
+    [Word("want", "any", "any", "any")],[Word("watch", "any", "any", "any")],
+    [Word("spend", "any", "any", "any")],[Word("enjoy", "any", "any", "any")],
+    [Word("book", "any", "any", "any")],[Word("present", "any", "any", "any")],
+    [Word("build", "any", "any", "any")],[Word("sing", "any", "any", "any")],
+    [Word("dance", "any", "any", "any")],[Word("paint", "any", "any", "any")],
+    [Word("write", "any", "any", "any")],[Word("call", "any", "any", "any")],
+    [Word("drive", "any", "any", "any")],[Word("buy", "any", "any", "any")],
+    [Word("sell", "any", "any", "any")],[Word("read", "any", "any", "any")],
+    [Word("open", "any", "any", "any")],[Word("close", "any", "any", "any")],
+    [Word("fix", "any", "any", "any")],[Word("carry", "any", "any", "any")],
+    [Word("create", "any", "any", "any")],[Word("explore", "any", "any", "any")],
+    [Word("face", "any", "any", "any")],
 ]
 
 # Past tense verbs (same form for singular and plural)
 VBD = [
-    [["bought", {"person": "any", "tense": "past"}]],
-    [["helped", {"person": "any", "tense": "past"}]],
-    [["watched", {"person": "any", "tense": "past"}]],
-    [["ate", {"person": "any", "tense": "past"}]],
-    [["took", {"person": "any", "tense": "past"}]],
-    [["spent", {"person": "any", "tense": "past"}]],
-    [["enjoyed", {"person": "any", "tense": "past"}]],
-    [["booked", {"person": "any", "tense": "past"}]],
-    [["presented", {"person": "any", "tense": "past"}]],
-    [["went", {"person": "any", "tense": "past"}]],
-    [["was", {"person": "3", "tense": "past"}]],
-    [["were", {"person": "1", "tense": "past"}]],
-    [["built", {"person": "any", "tense": "past"}]],
-    [["sang", {"person": "any", "tense": "past"}]],
-    [["danced", {"person": "any", "tense": "past"}]],
-    [["painted", {"person": "any", "tense": "past"}]],
-    [["wrote", {"person": "any", "tense": "past"}]],
-    [["called", {"person": "any", "tense": "past"}]],
-    [["drove", {"person": "any", "tense": "past"}]],
-    [["sold", {"person": "any", "tense": "past"}]],
-    [["read", {"person": "any", "tense": "past"}]],
-    [["opened", {"person": "any", "tense": "past"}]],
-    [["closed", {"person": "any", "tense": "past"}]],
-    [["fixed", {"person": "any", "tense": "past"}]],
-    [["carried", {"person": "any", "tense": "past"}]],
-    [["created", {"person": "any", "tense": "past"}]],
-    [["explored", {"person": "any", "tense": "past"}]],
-    [["faced", {"person": "any", "tense": "past"}]],
+    [Word("bought", "any", "past", "any")],[Word("helped", "any", "past", "any")],
+    [Word("watched", "any", "past", "any")],[Word("ate", "any", "past", "any")],
+    [Word("took", "any", "past", "any")],[Word("spent", "any", "past", "any")],
+    [Word("enjoyed", "any", "past", "any")],[Word("booked", "any", "past", "any")],
+    [Word("presented", "any", "past", "any")],[Word("went", "any", "past", "any")],
+    [Word("was", "3", "past", "any")],[Word("were", "1", "past", "any")],
+    [Word("built", "any", "past", "any")],[Word("sang", "any", "past", "any")],
+    [Word("danced", "any", "past", "any")],[Word("painted", "any", "past", "any")],
+    [Word("wrote", "any", "past", "any")],[Word("called", "any", "past", "any")],
+    [Word("drove", "any", "past", "any")],[Word("sold", "any", "past", "any")],
+    [Word("read", "any", "past", "any")],[Word("opened", "any", "past", "any")],
+    [Word("closed", "any", "past", "any")],[Word("fixed", "any", "past", "any")],
+    [Word("carried", "any", "past", "any")],[Word("created", "any", "past", "any")],
+    [Word("explored", "any", "past", "any")],[Word("faced", "any", "past", "any")],
 ]
 
 # 3rd person singular present verbs (tense "present" and person "3")
 VBZ = [
-    [["prefers", {"person": "3", "tense": "any"}]],
-    [["includes", {"person": "3", "tense": "any"}]],
-    [["eats", {"person": "3", "tense": "any"}]],
-    [["takes", {"person": "3", "tense": "any"}]],
-    [["spends", {"person": "3", "tense": "any"}]],
-    [["watches", {"person": "3", "tense": "any"}]],
-    [["enjoys", {"person": "3", "tense": "any"}]],
-    [["books", {"person": "3", "tense": "any"}]],
-    [["presents", {"person": "3", "tense": "any"}]],
-    [["goes", {"person": "3", "tense": "any"}]],
-    [["builds", {"person": "3", "tense": "any"}]],
-    [["sings", {"person": "3", "tense": "any"}]],
-    [["dances", {"person": "3", "tense": "any"}]],
-    [["paints", {"person": "3", "tense": "any"}]],
-    [["writes", {"person": "3", "tense": "any"}]],
-    [["calls", {"person": "3", "tense": "any"}]],
-    [["drives", {"person": "3", "tense": "any"}]],
-    [["buys", {"person": "3", "tense": "any"}]],
-    [["sells", {"person": "3", "tense": "any"}]],
-    [["reads", {"person": "3", "tense": "any"}]],
-    [["opens", {"person": "3", "tense": "any"}]],
-    [["closes", {"person": "3", "tense": "any"}]],
-    [["fixes", {"person": "3", "tense": "any"}]],
-    [["carries", {"person": "3", "tense": "any"}]],
-    [["creates", {"person": "3", "tense": "any"}]],
-    [["explores", {"person": "3", "tense": "any"}]],
-    [["faces", {"person": "3", "tense": "any"}]],
+    [Word("prefers", "3", "any", "any")],[Word("includes", "3", "any", "any")],
+    [Word("eats", "3", "any", "any")],[Word("takes", "3", "any", "any")],
+    [Word("spends", "3", "any", "any")],[Word("watches", "3", "any", "any")],
+    [Word("enjoys", "3", "any", "any")],[Word("books", "3", "any", "any")],
+    [Word("presents", "3", "any", "any")],[Word("goes", "3", "any", "any")],
+    [Word("builds", "3", "any", "any")],[Word("sings", "3", "any", "any")],
+    [Word("dances", "3", "any", "any")],[Word("paints", "3", "any", "any")],
+    [Word("writes", "3", "any", "any")],[Word("calls", "3", "any", "any")],
+    [Word("drives", "3", "any", "any")],[Word("buys", "3", "any", "any")],
+    [Word("sells", "3", "any", "any")],[Word("reads", "3", "any", "any")],
+    [Word("opens", "3", "any", "any")],[Word("closes", "3", "any", "any")],
+    [Word("fixes", "3", "any", "any")],[Word("carries", "3", "any", "any")],
+    [Word("creates", "3", "any", "any")],[Word("explores", "3", "any", "any")],
+    [Word("faces", "3", "any", "any")],
 ]
 
 # Non-3rd person singular present verbs (no "s" ending, plural subjects)
 VBP = [
-    [["prefer", {"person": "1", "tense": "any"}]],
-    [["include", {"person": "1", "tense": "any"}]],
-    [["eat", {"person": "1", "tense": "any"}]],
-    [["take", {"person": "1", "tense": "any"}]],
-    [["spend", {"person": "1", "tense": "any"}]],
-    [["watch", {"person": "1", "tense": "any"}]],
-    [["enjoy", {"person": "1", "tense": "any"}]],
-    [["book", {"person": "1", "tense": "any"}]],
-    [["present", {"person": "1", "tense": "any"}]],
-    [["build", {"person": "1", "tense": "any"}]],
-    [["sing", {"person": "1", "tense": "any"}]],
-    [["dance", {"person": "1", "tense": "any"}]],
-    [["paint", {"person": "1", "tense": "any"}]],
-    [["write", {"person": "1", "tense": "any"}]],
-    [["call", {"person": "1", "tense": "any"}]],
-    [["drive", {"person": "1", "tense": "any"}]],
-    [["buy", {"person": "1", "tense": "any"}]],
-    [["sell", {"person": "1", "tense": "any"}]],
-    [["read", {"person": "1", "tense": "any"}]],
-    [["open", {"person": "1", "tense": "any"}]],
-    [["close", {"person": "1", "tense": "any"}]],
-    [["fix", {"person": "1", "tense": "any"}]],
-    [["carry", {"person": "1", "tense": "any"}]],
-    [["create", {"person": "1", "tense": "any"}]],
-    [["explore", {"person": "1", "tense": "any"}]],
-    [["face", {"person": "1", "tense": "any"}]],
+    [Word("prefer", "1", "any", "any")],[Word("include", "1", "any", "any")],
+    [Word("eat", "1", "any", "any")],[Word("take", "1", "any", "any")],
+    [Word("spend", "1", "any", "any")],[Word("watch", "1", "any", "any")],
+    [Word("enjoy", "1", "any", "any")],[Word("book", "1", "any", "any")],
+    [Word("present", "1", "any", "any")],[Word("build", "1", "any", "any")],
+    [Word("sing", "1", "any", "any")],[Word("dance", "1", "any", "any")],
+    [Word("paint", "1", "any", "any")],[Word("write", "1", "any", "any")],
+    [Word("call", "1", "any", "any")],[Word("drive", "1", "any", "any")],
+    [Word("buy", "1", "any", "any")],[Word("sell", "1", "any", "any")],
+    [Word("read", "1", "any", "any")],[Word("open", "1", "any", "any")],
+    [Word("close", "1", "any", "any")],[Word("fix", "1", "any", "any")],
+    [Word("carry", "1", "any", "any")],[Word("create", "1", "any", "any")],
+    [Word("explore", "1", "any", "any")],[Word("face", "1", "any", "any")],
 ]
-
 
 # Personal pronouns
 PRP = [
-    [["I"], {"person": "1"}],
-    [["she"], {"person": "3"}],
-    [["we"], {"person": "1"}],
-    [["you"], {"person": "1"}],
-    [["her"], {"person": "3"}],
-    [["he"], {"person": "3"}],
-    [["it"], {"person": "3"}],
-    [["they"], {"person": "1"}],
-    [["them"], {"person": "1"}]
+    [Word("I", "1", "any", "any")],
+    [Word("she", "3", "any", "any")],
+    [Word("we", "1", "any", "any")],
+    [Word("you", "1", "any", "any")],
+    [Word("her", "3", "any", "any")],
+    [Word("he", "3", "any", "any")],
+    [Word("it", "3", "any", "any")],
+    [Word("they", "1", "any", "any")],
+    [Word("them", "1", "any", "any")],
 ]
 
-NNP= [["Houston"], ["NWA"]]  # Singular proper nouns
+# Singular proper nouns
+NNP = [
+    [Word("Houston", "any", "any", "any")],
+    [Word("NWA", "any", "any", "any")]
+]
+
 # Prepositions
-IN= [
-    ["from"], ["to"], ["on"], ["near"], ["through"], ["with"], ["under"], ["over"], ["beside"],
-    ["between"], ["before"], ["after"], ["inside"], ["outside"], ["around"], ["above"], ["below"]
+IN = [
+    [Word("from", "any", "any", "any")],
+    [Word("to", "any", "any", "any")],
+    [Word("on", "any", "any", "any")],
+    [Word("near", "any", "any", "any")],
+    [Word("through", "any", "any", "any")],
+    [Word("with", "any", "any", "any")],
+    [Word("under", "any", "any", "any")],
+    [Word("over", "any", "any", "any")],
+    [Word("beside", "any", "any", "any")],
+    [Word("between", "any", "any", "any")],
+    [Word("before", "any", "any", "any")],
+    [Word("after", "any", "any", "any")],
+    [Word("inside", "any", "any", "any")],
+    [Word("outside", "any", "any", "any")],
+    [Word("around", "any", "any", "any")],
+    [Word("above", "any", "any", "any")],
+    [Word("below", "any", "any", "any")]
 ]
+
 # Adverbs
-RB= [
-    ["quickly"], ["slowly"], ["often"], ["always"], ["never"], ["here"], ["yesterday"],
-    ["today"], ["tomorrow"], ["carefully"], ["happily"], ["sadly"], ["silently"], ["loudly"],
-    ["angrily"], ["eagerly"]
+RB = [
+    [Word("quickly", "any", "any", "any")],
+    [Word("slowly", "any", "any", "any")],
+    [Word("often", "any", "any", "any")],
+    [Word("always", "any", "any", "any")],
+    [Word("never", "any", "any", "any")],
+    [Word("here", "any", "any", "any")],
+    [Word("yesterday", "any", "any", "any")],
+    [Word("today", "any", "any", "any")],
+    [Word("tomorrow", "any", "any", "any")],
+    [Word("carefully", "any", "any", "any")],
+    [Word("happily", "any", "any", "any")],
+    [Word("sadly", "any", "any", "any")],
+    [Word("silently", "any", "any", "any")],
+    [Word("loudly", "any", "any", "any")],
+    [Word("angrily", "any", "any", "any")],
+    [Word("eagerly", "any", "any", "any")]
 ]
+
 # Modal verbs
 MD = [
-    [["will"], {"tense": "future"}],
-    [["can"], {"tense": "any"}],
-    [["should"], {"tense": "any"}],
-    [["would"], {"tense": "past"}],
-    [["may"], {"tense": "any"}],
-    [["might"], {"tense": "any"}],
-    [["must"], {"tense": "any"}]
+    [Word("will", "any", "future", "any")],
+    [Word("can", "any", "any", "any")],
+    [Word("should", "any", "any", "any")],
+    [Word("would", "any", "past", "any")],
+    [Word("may", "any", "any", "any")],
+    [Word("might", "any", "any", "any")],
+    [Word("must", "any", "any", "any")]
 ]
 
-VBG= [
-    ["playing"], ["running"], ["watching"], ["painting"], ["calling"], ["helping"], ["working"], ["riding"], ["moving"],
-    ["jumping"], ["cooking"], ["fighting"], ["dreaming"], ["dancing"], ["kissing"], ["planning"], ["visiting"],
-    ["starting"], ["ending"], ["going"], ["eating"], ["spending"], ["enjoying"], ["taking"], ["including"],
-    ["preferring"]
+# Present participles (VBG)
+VBG = [
+    [Word("playing", "any", "any", "present")],
+    [Word("running", "any", "any", "present")],
+    [Word("watching", "any", "any", "present")],
+    [Word("painting", "any", "any", "present")],
+    [Word("calling", "any", "any", "present")],
+    [Word("helping", "any", "any", "present")],
+    [Word("working", "any", "any", "present")],
+    [Word("riding", "any", "any", "present")],
+    [Word("moving", "any", "any", "present")],
+    [Word("jumping", "any", "any", "present")],
+    [Word("cooking", "any", "any", "present")],
+    [Word("fighting", "any", "any", "present")],
+    [Word("dreaming", "any", "any", "present")],
+    [Word("dancing", "any", "any", "present")],
+    [Word("kissing", "any", "any", "present")],
+    [Word("planning", "any", "any", "present")],
+    [Word("visiting", "any", "any", "present")],
+    [Word("starting", "any", "any", "present")],
+    [Word("ending", "any", "any", "present")],
+    [Word("going", "any", "any", "present")],
+    [Word("eating", "any", "any", "present")],
+    [Word("spending", "any", "any", "present")],
+    [Word("enjoying", "any", "any", "present")],
+    [Word("taking", "any", "any", "present")],
+    [Word("including", "any", "any", "present")],
+    [Word("preferring", "any", "any", "present")]
 ]
+
 # Possible wh-words
-Wh_Word= [
-    ["what"], ["where"], ["when"], ["why"], ["how"]
-]
-JJ= [
-    ["red"], ["blue"], ["big"], ["small"], ["delicious"], ["beautiful"], ["interesting"], ["important"], ["happy"],
-    ["sad"], ["fast"], ["slow"], ["heavy"], ["light"], ["young"], ["old"], ["rich"], ["poor"], ["strong"], ["weak"],
-    ["friendly"], ["angry"], ["quiet"], ["loud"], ["clean"], ["dirty"], ["long"], ["short"], ["thick"], ["thin"],
-    ["hot"], ["cold"], ["warm"], ["cool"], ["soft"], ["hard"], ["sharp"], ["smooth"], ["rough"], ["expensive"],
-    ["cheap"], ["sweet"], ["sour"], ["bitter"], ["spicy"], ["tall"], ["short"], ["early"], ["late"], ["kind"],
-    ["generous"], ["selfish"], ["brave"], ["breathtaking"], ["gorgeous"], ["active"], ["funny"], ["serious"],
-    ["polite"],
-    ["rude"], ["creative"], ["boring"], ["beautiful"], ["ugly"], ["pleasant"], ["unpleasant"], ["calm"], ["nervous"]
+Wh_Word = [
+    [Word("what", "any", "any", "any")],
+    [Word("where", "any", "any", "any")],
+    [Word("when", "any", "any", "any")],
+    [Word("why", "any", "any", "any")],
+    [Word("how", "any", "any", "any")]
 ]
 
-JJR= [
-    ["bigger"], ["smaller"], ["more delicious"], ["more beautiful"], ["more interesting"], ["happier"], ["sadder"],
-    ["faster"], ["slower"], ["heavier"], ["lighter"], ["younger"], ["older"], ["richer"], ["poorer"], ["stronger"],
-    ["weaker"], ["friendlier"], ["angrier"], ["quieter"], ["louder"], ["cleaner"], ["dirtier"], ["longer"], ["shorter"],
-    ["thicker"], ["thinner"], ["hotter"], ["colder"], ["warmer"], ["cooler"], ["softer"], ["harder"], ["sharper"],
-    ["smoother"], ["rougher"], ["more expensive"], ["cheaper"], ["sweeter"], ["sourer"], ["more bitter"], ["spicier"],
-    ["taller"], ["shorter"], ["earlier"], ["later"], ["kinder"], ["more generous"], ["more selfish"], ["braver"],
-    ["cowardlier"], ["lazier"], ["more active"], ["funnier"], ["more serious"], ["more polite"], ["ruder"],
-    ["more creative"], ["more boring"], ["more beautiful"], ["uglier"], ["more pleasant"], ["more unpleasant"],
-    ["calmer"], ["more nervous"]
+# Adjectives (JJ)
+JJ = [
+    [Word("red", "any", "any", "any")],[Word("blue", "any", "any", "any")],
+    [Word("big", "any", "any", "any")],[Word("small", "any", "any", "any")],
+    [Word("delicious", "any", "any", "any")],[Word("beautiful", "any", "any", "any")],
+    [Word("interesting", "any", "any", "any")],[Word("important", "any", "any", "any")],
+    [Word("happy", "any", "any", "any")],[Word("sad", "any", "any", "any")],
+    [Word("fast", "any", "any", "any")],[Word("slow", "any", "any", "any")],
+    [Word("heavy", "any", "any", "any")],[Word("light", "any", "any", "any")],
+    [Word("young", "any", "any", "any")],[Word("old", "any", "any", "any")],
+    [Word("rich", "any", "any", "any")],[Word("poor", "any", "any", "any")],
+    [Word("strong", "any", "any", "any")],[Word("weak", "any", "any", "any")],
+    [Word("friendly", "any", "any", "any")],[Word("angry", "any", "any", "any")],
+    [Word("quiet", "any", "any", "any")],[Word("loud", "any", "any", "any")],
+    [Word("clean", "any", "any", "any")],[Word("dirty", "any", "any", "any")],
+    [Word("long", "any", "any", "any")],[Word("short", "any", "any", "any")],
+    [Word("thick", "any", "any", "any")],[Word("thin", "any", "any", "any")],
+    [Word("hot", "any", "any", "any")],[Word("cold", "any", "any", "any")],
+    [Word("warm", "any", "any", "any")],[Word("cool", "any", "any", "any")],
+    [Word("soft", "any", "any", "any")],[Word("hard", "any", "any", "any")],
+    [Word("sharp", "any", "any", "any")],[Word("smooth", "any", "any", "any")],
+    [Word("rough", "any", "any", "any")],[Word("expensive", "any", "any", "any")],
+    [Word("cheap", "any", "any", "any")],[Word("sweet", "any", "any", "any")],
+    [Word("sour", "any", "any", "any")],[Word("bitter", "any", "any", "any")],
+    [Word("spicy", "any", "any", "any")],[Word("tall", "any", "any", "any")],
+    [Word("short", "any", "any", "any")],[Word("early", "any", "any", "any")],
+    [Word("late", "any", "any", "any")],[Word("kind", "any", "any", "any")],
+    [Word("generous", "any", "any", "any")],[Word("selfish", "any", "any", "any")],
+    [Word("brave", "any", "any", "any")],[Word("breathtaking", "any", "any", "any")],
+    [Word("gorgeous", "any", "any", "any")],[Word("active", "any", "any", "any")],
+    [Word("funny", "any", "any", "any")],[Word("serious", "any", "any", "any")],
+    [Word("polite", "any", "any", "any")],[Word("rude", "any", "any", "any")],
+    [Word("creative", "any", "any", "any")],[Word("boring", "any", "any", "any")],
+    [Word("beautiful", "any", "any", "any")],[Word("ugly", "any", "any", "any")],
+    [Word("pleasant", "any", "any", "any")],[Word("unpleasant", "any", "any", "any")],
+    [Word("calm", "any", "any", "any")],[Word("nervous", "any", "any", "any")]
 ]
 
-JJS= [
-    ["biggest"], ["smallest"], ["fastest"], ["slowest"], ["youngest"], ["oldest"], ["happiest"],
-    ["saddest"], ["strongest"], ["weakest"], ["brightest"], ["darkest"], ["smartest"],
-    ["most delicious"], ["most beautiful"], ["most interesting"], ["most important"]
+# Comparative adjectives (JJR)
+JJR = [
+    [Word("bigger", "any", "any", "any")],[Word("smaller", "any", "any", "any")],
+    [Word("more delicious", "any", "any", "any")],[Word("more beautiful", "any", "any", "any")],
+    [Word("more interesting", "any", "any", "any")],[Word("happier", "any", "any", "any")],
+    [Word("sadder", "any", "any", "any")],[Word("faster", "any", "any", "any")],
+    [Word("slower", "any", "any", "any")],[Word("heavier", "any", "any", "any")],
+    [Word("lighter", "any", "any", "any")],[Word("younger", "any", "any", "any")],
+    [Word("older", "any", "any", "any")],[Word("richer", "any", "any", "any")],
+    [Word("poorer", "any", "any", "any")],[Word("stronger", "any", "any", "any")],
+    [Word("weaker", "any", "any", "any")],[Word("friendlier", "any", "any", "any")],
+    [Word("angrier", "any", "any", "any")],[Word("quieter", "any", "any", "any")],
+    [Word("louder", "any", "any", "any")],[Word("cleaner", "any", "any", "any")],
+    [Word("dirtier", "any", "any", "any")],[Word("longer", "any", "any", "any")],
+    [Word("shorter", "any", "any", "any")],[Word("thicker", "any", "any", "any")],
+    [Word("thinner", "any", "any", "any")],[Word("hotter", "any", "any", "any")],
+    [Word("colder", "any", "any", "any")],[Word("warmer", "any", "any", "any")],
+    [Word("cooler", "any", "any", "any")],[Word("softer", "any", "any", "any")],
+    [Word("harder", "any", "any", "any")],[Word("sharper", "any", "any", "any")],
+    [Word("smoother", "any", "any", "any")],[Word("rougher", "any", "any", "any")],
+    [Word("more expensive", "any", "any", "any")],[Word("cheaper", "any", "any", "any")],
+    [Word("sweeter", "any", "any", "any")],[Word("sourer", "any", "any", "any")],
+    [Word("more bitter", "any", "any", "any")],[Word("spicier", "any", "any", "any")],
+    [Word("taller", "any", "any", "any")],[Word("shorter", "any", "any", "any")],
+    [Word("earlier", "any", "any", "any")],[Word("later", "any", "any", "any")],
+    [Word("kinder", "any", "any", "any")],[Word("more generous", "any", "any", "any")],
+    [Word("more selfish", "any", "any", "any")],[Word("braver", "any", "any", "any")],
+    [Word("lazier", "any", "any", "any")],[Word("more active", "any", "any", "any")],
+    [Word("funnier", "any", "any", "any")],[Word("more serious", "any", "any", "any")],
+    [Word("more polite", "any", "any", "any")],[Word("ruder", "any", "any", "any")],
+    [Word("more creative", "any", "any", "any")],[Word("more boring", "any", "any", "any")],
+    [Word("more beautiful", "any", "any", "any")],[Word("uglier", "any", "any", "any")],
+    [Word("more pleasant", "any", "any", "any")],[Word("more unpleasant", "any", "any", "any")],
+    [Word("calmer", "any", "any", "any")],[Word("more nervous", "any", "any", "any")]
 ]
 
-AUX= [["does"], ["did"], ["do"], ["am"], ["is"], ["are"]]
-Neg= [["not"]]
-DO= [["do"]]
+# Superlative adjectives (JJS)
+JJS = [
+    [Word("biggest", "any", "any", "any")],[Word("smallest", "any", "any", "any")],
+    [Word("fastest", "any", "any", "any")],[Word("slowest", "any", "any", "any")],
+    [Word("youngest", "any", "any", "any")],[Word("oldest", "any", "any", "any")],
+    [Word("happiest", "any", "any", "any")],[Word("saddest", "any", "any", "any")],
+    [Word("strongest", "any", "any", "any")],[Word("weakest", "any", "any", "any")],
+    [Word("brightest", "any", "any", "any")],[Word("darkest", "any", "any", "any")],
+    [Word("smartest", "any", "any", "any")],[Word("most delicious", "any", "any", "any")],
+    [Word("most beautiful", "any", "any", "any")],[Word("most interesting", "any", "any", "any")],
+    [Word("most important", "any", "any", "any")]
+]
 
+# Auxiliary Verbs (AUX)
+AUX = [
+    [Word("does", "any", "any", "present")],
+    [Word("did", "any", "any", "past")],
+    [Word("do", "any", "any", "any")],
+    [Word("am", "any", "any", "present")],
+    [Word("is", "any", "any", "present")],
+    [Word("are", "any", "any", "present")]
+]
 
+# Negation (Neg)
+Neg = [
+    [Word("not", "any", "any", "any")]
+]
+
+# Do (DO)
+DO = [
+    [Word("do", "any", "any", "any")]
+]
 
 grammar_rules = {
     "S": [
@@ -383,7 +422,6 @@ grammar_rules = {
     "X8": [
         [DO, Neg]
     ],
-
 
     "PP": [
         [IN, "NP"]  # Preposition + NP
